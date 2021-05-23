@@ -1,0 +1,100 @@
+{
+  
+  "name": "Flight Booking Information",
+  "Searchid":{
+	          "description": "unique ID of the Search which turned to Booking",
+			  "name":"Search ID",
+			  "type":"GUID"
+             },
+  "Reservation id":{ "type":"string"},
+  "user1" :{
+	       "type":"object"
+		     "Properties":{
+				  "first name":{"type":"string"},
+				  "Last name":{"type":"string"},
+				  "email":{"type":"string"}
+			 }
+  },
+     "user2" :{
+	       "type":"object"
+		     "Properties":{
+				  "first name":{"type":"string"},
+				  "Last name":{"type":"string"},
+				  "email":{"type":"string"}
+			 }
+	 },
+     "user3" :{
+	       "type":"object"
+		     "Properties":{
+				  "first name":{"type":"string"},
+				  "Last name":{"type":"string"},
+				  "email":{"type":"string"}
+			 }
+  }, 
+
+"departing Flight":{
+				  "name":"departing Flight"
+				  "type":"object",
+				  "properties":{
+						"name":{"description":"departing Flight","type":"string"},
+						"number":{"description":"Flight Number","type":"String"},
+						"duration":{"description":"total flight duration","type":"Time"},
+						"Departing airport":{"description":"Airport code","type":"string"},
+						"Depart_time":{"type":"Datetime"},
+						"Arrival Airport":{"description":"Arrival Airport Code","type":"String"},
+						"Arrival_Time":{"type":"DateTime"},
+						"Seat Number":{"type":"String"},
+				  },
+					"Price":{ "description": "Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "Upgrade":{"description":"Any upgrade customer used","type":"string",
+										          "enum":["No Preference","Milleage","MVP","MVP Gold","MVPGold75K","MVPguest"]
+										 }
+							  }
+					}
+},
+"Returning Flight":{
+				  "name":"Returning Flight",
+				  "type":"object",
+				  "properties":{
+						"name":{"description":"returning Flight","type":"string"},
+						"number":{"description":"Flight Number","type":"String"},
+						"duration":{"description":"total flight duration","type":"Time"},
+						"Departing airport":{"description":"Airport code","type":"string"},
+						"Depart_time":{"type":"Datetime"},
+						"Arrival Airport":{"description":"Arrival Airport Code","type":"String"},
+						"Arrival_Time":{"type":"DateTime"},
+						"Seat Number":{"type":"String"},
+				  },
+					"Price":{ "description": "Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "Upgrade":{"description":"Any upgrade customer used","type":"string",
+										          "enum":["No Preference","Milleage","MVP","MVP Gold","MVPGold75K","MVPguest"]
+										 }
+							  }
+					}
+},
+"transaction":{
+	           "description":{"transaction details",
+				"type":"object",
+				"properties":{
+					  "Billing Type":{"type":"String","description":"type of billing Credit/Debit/Miles"},
+					   "Billing Address1":{"type":"string"},
+	                   "Billing Address2":{"type":"string"},
+				       "City":{"type":"string"},
+				       "State":{"type":"string"},
+				      "ZipCode":{"type":"string"},
+					  "Adults":{"type":"inteager"},
+					  "Childs":{"type":"inteager"},
+					  "Total transaction price":{"type":"float"}
+				}
+			   }
+}
+}
+
+					
+

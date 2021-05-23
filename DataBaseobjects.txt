@@ -1,0 +1,54 @@
+Objects related to events SQL .
+
+1) Search
+
+SearchId   --PK
+From
+To
+BookingType
+DepartureDate
+ArrivalDate
+Adults
+Children
+Search Time --GETDATE()
+
+2)SearchReusults
+
+Search_ResultID
+SearchID
+UUID
+FROM
+TO
+DepartingFlight
+ReturningFlight
+BookingType
+Stops
+SaverPrice
+mainprice
+FirstClassprice
+MilesUsed
+
+
+3) Bookings
+
+BookingID
+ReservationID
+Search_resultID
+UUID
+FROM
+TO
+DeparutreDate
+ArrivalDate
+DepartureFlight
+ArrivalFlight
+Price
+Adults
+Children
+TotalPrice
+BookingDate
+isMilesUsed
+TransactionID   --- Table linked to CreditCard TransactionTable
+
+
+
+	

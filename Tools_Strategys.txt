@@ -1,0 +1,22 @@
+since i have experience or knowledge only on Azure tools will provide approcehs with in Azure Space, similar products will be availabe in AWS or GCP .
+
+All these option are scalabe and Secure .
+
+Option 1: Azure Event Hubs/Stream Analytics/Blobs/SQL/Power BI
+ Api management/Azure Functions/(Cosmos DB or SQL Server)
+ Pros:
+      Scalable
+      Cloud based
+Cons:
+     expensive
+    
+
+Option 2: REST API/Azure Functions or Logic Apps /Blobs/Data lakes/SQL
+   Pro:
+       we can convert legacy web services to REST api
+       Scalable
+
+Option 3:
+python: I assume we can use python with multiple open source api's availabel to capture the evnents and 
+     Pro: Open Source
+     Cons: python coding expertise required

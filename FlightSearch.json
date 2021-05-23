@@ -1,0 +1,233 @@
+{
+  "name": "Book a Flight",
+  "description": "FlightSearch Page",
+  "type": "object",
+  "FlightType": {
+    "Round-Trip": {
+      "name": "Round-Trip",
+	  "From": { 
+	          "description": "FromCity", 
+			  "type": "String" ,
+			  { "name":"include near by airport" ,
+			     "description":"Near by airports",
+				 "type":"Checkbox"
+			  }
+	          },
+	  "To": { 
+	          "description": "ToCity", 
+	          "type": "String" 
+			  { "name":"include near by airport" ,
+			     "description":"Near by airports",
+				 "type":"Checkbox"
+			  }
+	         },
+	  "Departurting": 
+	  {
+		    "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 }
+	  },
+			  
+	  "Returning": { 
+	          "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 } },
+	 "Flexible Dates": 
+	            { "description": "Flexibl", 
+	           "type": "selection" }
+	}
+	"One-Way": {
+      "name": "One-Way",
+	  "From": { 
+	          "description": "FromCity", 
+			  "type": "String" ,
+			  { "name":"include near by airport" ,
+			     "description":"Near by airports",
+				 "type":"Checkbox"
+			  }
+	          },
+	  "To": { 
+	          "description": "ToCity", 
+	          "type": "String" 
+			  { "name":"include near by airport" ,
+			     "description":"Near by airports",
+				 "type":"Checkbox"
+			  }
+	         },
+	  "Departurting": { 
+	          "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 }},
+	  "Flexible Dates": 
+	            { "description": "Flexible", 
+	           "type": "selection" }
+	},
+	"Multi-City": {
+      "name": "Multi-City",
+	  "First Flight":{
+		       "description":"First Flight",
+	  "From": { 
+	          "description": "FromCity", 
+			  "type": "String" 
+	          },
+	  "To": { 
+	          "description": "ToCity", 
+	          "type": "String" 
+	         },
+	  "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 }
+	  },
+	  "Second ":{
+		       "description":"Second Flight",
+	  "From": { 
+	          "description": "FromCity", 
+			  "type": "String" 
+	          },
+	  "To": { 
+	          "description": "ToCity", 
+	          "type": "String" 
+	         },
+	  "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 }
+	  },
+	  "Third ":{
+		       "description":"Third Flight",
+	  "From": { 
+	          "description": "FromCity", 
+			  "type": "String" 
+	          },
+	  "To": { 
+	          "description": "ToCity", 
+	          "type": "String" 
+	         },
+	  "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 }
+	  },
+	  "Fourth":{
+		       "description":"Fourth Flight",
+	  "From": { 
+	          "description": "FromCity", 
+			  "type": "String" 
+	          },
+	  "To": { 
+	          "description": "ToCity", 
+	          "type": "String" 
+	         },
+	  "Date":
+			{
+			   "name":"Date"
+	          "description": "DepartureDate", 
+			  "type": "Date" },
+			 "Time":
+			 { "name" :"Time"
+			   " description": "Depaerting Time",
+			   "type":"Time"
+			 }
+	  }
+	}
+	  "Adults": { 
+			"description": "Number of Adults", 
+			 "type": "array",
+			 "items":{
+             "type": "string",
+			 "enum": [
+            "0 adults",
+            "1 adults",
+            "2 adults",
+            "3 adults",
+			"3 adults",
+			"4 adults",
+			"5 adults",
+			"6 adults",
+			"7 adults",
+             ]
+	  }}
+	  "Children": { 
+	  
+			"description": "Number of Children", 
+			"type": "array",
+			 "items":{
+			 "type": "string",
+			 "enum": ["0 Ages 2-17" ,"0 Under (on lap)" ]
+			 }
+	        },
+	  "Use_Miles": 
+	            { "description": "Use Miles", 
+	           "type": "selection" }
+      "Upgrades&Discounts":
+	  {
+		 "Description":"Upgrades & Discount",
+		 "type":"object",
+	   "Upgrade Type":
+	   {
+		    "description":"About upgrade presfeerence",
+			"tool tip":"About upgrade presfeerence",
+			"type": "array",
+			"items":{
+			"type":"string",
+			"enum": [
+            "No Preference",
+            "Mileage",
+            "MVP",
+            "MVP GOLD",
+			"MVP GOLD 75K",
+			"MVP Guest"
+             ],
+			 "default":"No Preference"
+			}
+	   }
+	       }
+		  "Discount or Coupon":
+		  {
+		     "description":"Discount Code",
+			 "type":"string",
+           }
+	  }
+}
+}
+}

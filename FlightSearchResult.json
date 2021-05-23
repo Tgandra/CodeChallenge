@@ -1,0 +1,163 @@
+{
+  
+  "name": "Flight Search Results Page",
+  "Searchid":{
+	          "description": "unique ID for the Search",
+			  "name":"Search ID",
+			  "type":"GUID"
+             },
+   "uuid":{
+            "description":"Unique User Identification",
+            "name":"uuid",
+            "type":"GUID"	
+          },
+   	"Response":{
+			"description": "Result from page",
+			"type": "String",
+			"enum":["Success","Fail"]
+		      },
+  "Available_Flights": {
+	       "description":"list all avaialble filghts",
+		   "name":"Available Flights",
+		   {
+			  "Choose departing Flight":{
+				  "name":"Choose departing Flight"
+				  "type":"object",
+				  "properties":{
+						"name":{"description":"departing Flight","type":"string"},
+						"number":{"description":"Flight Number","type":"String"},
+						"duration":{"description":"total flight duration","type":"Time"},
+						"Stops":{"description":"Stops information","type":"String","enum":["Non Stop","1-stop","2-stop"]},
+						"Departing airport":{"description":"Airport code","type":"string"},
+						"Depart_time":{"type":"Datetime"},
+						"Arrival Airport":{"description":"Arrival Airport Code","type":"String"},
+						"Arrival_Time":{"type":"DateTime"},
+						"Flight Features": {"description":"Available features",
+						 "type":"object",
+						  "properties":{
+							   "wifi":{"description":" wifi avaialble forpurchase","type":"boolean","enum":["TRUE","False"]},
+							   "Power":{"description":"Power at your seat", "type":"boolean","enum":["TRUE","False"]},
+							   "Entertainment":{"description":"Entertainment", "type":"boolean","enum":["TRUE","False"]}
+						  }
+						},
+						"Flight Statistics": {"description":"Details",
+						 "type":"object",
+						  "properties":{
+							   "%onTime":{"type":"string"},
+							   "%late 30+ min":{"type":"string"},
+							   "%cancelled":{"type":"string"}
+						  }
+						}
+						"FlightOperatedBy":{"type":"string"},
+					"Saver Price":{ "description": "Saver Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "AvailableSeats":{"description":"no of seats available at this price","type":"inteager"},
+										 "refundable Price":{"description":"Refund Eligible","type":"inteager"},
+										 "Mileage Price":{"description":"Price for Mileage Users","type":"inteager"},
+										 "MVP Price":{"description":"Price for MVP Users","type":"inteager"},
+										 "MVP GOLD Price":{"description":"Price for MVPGOLD Users","type":"inteager"},
+										 "MVPGO GOld 75k Price":{"description":"Price for MVPGold75K Users","type":"inteager"},
+										 "MVP Guest Price":{"description":"Price for MVPguest Users","type":"inteager"},
+							  }
+					},
+					"Main Price":{ "description": "Main Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "AvailableSeats":{"description":"no of seats available at this price","type":"inteager"},
+										 "refundable Price":{"description":"Refund Eligible","type":"inteager"},
+										 "Mileage Price":{"description":"Price for Mileage Users","type":"inteager"},
+										 "MVP Price":{"description":"Price for MVP Users","type":"inteager"},
+										 "MVP GOLD Price":{"description":"Price for MVPGOLD Users","type":"inteager"},
+										 "MVPGO GOld 75k Price":{"description":"Price for MVPGold75K Users","type":"inteager"},
+										 "MVP Guest Price":{"description":"Price for MVPguest Users","type":"inteager"},
+							  }
+					},
+					"Firstcalss Price":{ "description": "Firstclass Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "AvailableSeats":{"description":"no of seats available at this price","type":"inteager"},
+										 "refundable Price":{"description":"Refund Eligible","type":"inteager"},
+										 "Mileage Price":{"description":"Price for Mileage Users","type":"inteager"},
+										 "MVP Price":{"description":"Price for MVP Users","type":"inteager"},
+										 "MVP GOLD Price":{"description":"Price for MVPGOLD Users","type":"inteager"},
+										 "MVPGO GOld 75k Price":{"description":"Price for MVPGold75K Users","type":"inteager"},
+										 "MVP Guest Price":{"description":"Price for MVPguest Users","type":"inteager"},
+							  }
+					}
+				  }
+			  },
+			  "Choose returning flight":{
+				  "name":"Choose returning Flight"
+				  "type":"object",
+				  "properties":{
+						"name":{"description":"departing Flight","type":"string"},
+						"number":{"description":"Flight Number","type":"String"},
+						"duration":{"description":"total flight duration","type":"Time"},
+						"Stops":{"description":"Stops information","type":"String","enum":["Non Stop","1-stop","2-stop"]},
+						"Departing airport":{"description":"Airport code","type":"string"},
+						"Depart_time":{"type":"Datetime"},
+						"Arrival Airport":{"description":"Arrival Airport Code","type":"String"},
+						"Arrival_Time":{"type":"DateTime"},
+						"Flight Features": {"description":"Available features",
+						 "type":"object",
+						  "properties":{
+							   "wifi":{"description":" wifi avaialble forpurchase","type":"boolean","enum":["TRUE","False"]},
+							   "Power":{"description":"Power at your seat", "type":"boolean","enum":["TRUE","False"]},
+							   "Entertainment":{"description":"Entertainment", "type":"boolean","enum":["TRUE","False"]}
+						  }
+						}
+						"FlightOperatedBy":{"type":"string"},
+					"Saver Price":{ "description": "Saver Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "AvailableSeats":{"description":"no of seats available at this price","type":"inteager"},
+										 "refundable Price":{"description":"Refund Eligible","type":"inteager"},
+										 "Mileage Price":{"description":"Price for Mileage Users","type":"inteager"},
+										 "MVP Price":{"description":"Price for MVP Users","type":"inteager"},
+										 "MVP GOLD Price":{"description":"Price for MVPGOLD Users","type":"inteager"},
+										 "MVPGO GOld 75k Price":{"description":"Price for MVPGold75K Users","type":"inteager"},
+										 "MVP Guest Price":{"description":"Price for MVPguest Users","type":"inteager"},
+							  }
+					},
+					"Main Price":{ "description": "Main Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "AvailableSeats":{"description":"no of seats available at this price","type":"inteager"},
+										 "refundable Price":{"description":"Refund Eligible","type":"inteager"},
+										 "Mileage Price":{"description":"Price for Mileage Users","type":"inteager"},
+										 "MVP Price":{"description":"Price for MVP Users","type":"inteager"},
+										 "MVP GOLD Price":{"description":"Price for MVPGOLD Users","type":"inteager"},
+										 "MVPGO GOld 75k Price":{"description":"Price for MVPGold75K Users","type":"inteager"},
+										 "MVP Guest Price":{"description":"Price for MVPguest Users","type":"inteager"},
+							  }
+					},
+					"Firstcalss Price":{ "description": "Firstclass Flight Fare",
+					         "type":"object",
+							  "Properties":{
+								         "price":{"description":"flight price","type":"inteager"},
+										 "AvailableSeats":{"description":"no of seats available at this price","type":"inteager"},
+										 "refundable Price":{"description":"Refund Eligible","type":"inteager"},
+										 "Mileage Price":{"description":"Price for Mileage Users","type":"inteager"},
+										 "MVP Price":{"description":"Price for MVP Users","type":"inteager"},
+										 "MVP GOLD Price":{"description":"Price for MVPGOLD Users","type":"inteager"},
+										 "MVPGO GOld 75k Price":{"description":"Price for MVPGold75K Users","type":"inteager"},
+										 "MVP Guest Price":{"description":"Price for MVPguest Users","type":"inteager"},
+							  }
+					}
+				  }
+			  }
+										 
+		   }					      
+									  
+						
+						
+   
+        }
+  }
+
